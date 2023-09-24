@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap TASK-5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: grid;
+        }
+        .custom-container {
+            width: 700px;
+            place-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-container p-5 my-5 fs-3" style="background-color: rgb(223, 223, 223);">
+        <form class="was-validated">
+            <div class="row mb-4">
+                <div class="col-2 text-center h4 mt-3"> <label for="fname" class="form-label">First Name</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-user"></span></span>
+                    <input class="form-control fs-4" placeholder="First Name" type="text" name="fname" required>
+                    <div class="invalid-feedback">Please supply your first name</div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2 text-center h4 mt-3"> <label for="lname" class="form-label">Last Name</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-user"></span></span>
+                    <input class="form-control fs-4" placeholder="Last Name" type="text" name="lname" required>
+                    <div class="invalid-feedback">Please supply your last name</div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2 text-center h4 mt-3"> <label for="email" class="form-label">E-Mail</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-envelope"></span></span>
+                    <input class="form-control fs-4" placeholder="E-Mail Address" type="email" name="email" required>
+                    <div class="invalid-feedback">Please supply your email address</div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2 text-center h4 mt-3"> <label for="mobile" class="form-label">Phone #</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-earphone"></span></span>
+                    <input class="form-control fs-4" placeholder="(845)555-1212" type="number" name="mobile" required>
+                    <div class="invalid-feedback">Please supply your phone number</div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2 text-center h4 mt-3"> <label for="address" class="form-label">Address</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-home"></span></span>
+                    <input class="form-control fs-4" placeholder="Address" type="text" name="address" required>
+                    <div class="invalid-feedback">Please supply your address</div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2 text-center h4 mt-3"> <label for="city" class="form-label">City</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-user"></span></span>
+                    <input class="form-control fs-4" placeholder="City" type="text" name="city" required>
+                    <div class="invalid-feedback">Please supply your city</div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2 text-center h4 mt-3"> <label for="state" class="form-label">State</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-list"></span></span>
+                    <select class="form-select fs-4" required name="state">
+                        <option value="">Please select your state</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Kerala">Kerala</option>
+                    </select>
+                    <div class="invalid-feedback">Please supply your city</div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4 text-center h4 mt-3"> <label for="hosting" class="form-label">Do you have hosting?</label></div>
+                <div class="form-check col-8">
+                    <input type="radio" class="form-check-input" id="yes" name="hosting" required>
+                    <label class="fs-4" for="yes">yes</label>
+                    <br>
+                    <input type="radio" class="form-check-input" id="no" name="hosting" required>
+                    <label class="fs-4" for="no">No</label>
+                    <div class="invalid-feedback">please toogle any of the radio</div>
+                  </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4 text-center h4 mt-3"> <label for="desc" class="form-label">Project Description</label></div>
+                <div class="input-group col">
+                    <span class="input-group-addon" style="width:40px"><span class="glyphicon glyphicon-pencil mt-3"></span></span>
+                    <textarea name="desc" id="desc" cols="30" rows="3" placeholder="Project Description" class="form-control fs-4" required></textarea>
+                    <div class="invalid-feedback">Please supply your project description</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col"><button type="submit" onclick="alert('Registration Successful!')" class="btn btn-warning p-3 text-light row fs-3"><span class="col">Send&nbsp; <span class="glyphicon glyphicon-send"></span></span></button></div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

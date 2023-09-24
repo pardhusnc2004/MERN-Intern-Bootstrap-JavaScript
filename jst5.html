@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jst5.js"></script>
+    <title>JS TASK-5</title>
+    <style>
+        * {
+            font-size: medium
+        }
+        body {
+            display: grid;
+        }
+        .form-container {
+            place-self: center;
+            width: 600px;
+        }
+        .form {
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            justify-content: space-evenly; 
+            width: 600px;
+        }
+        label, input, textarea {
+            margin-bottom: 11%;
+        }
+        #submit {
+            width: 400px;
+        }
+        span {
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: x-large;">JS TASK-5</h1><br>
+    <div class="form-container">
+        <form action="" onsubmit="return validate()">
+            <div class="form">
+                <label style="font-size: x-large;" for="name">Name: </label>
+                <input type="text" name="name" id="name"><span id="message1"></span>
+                <label style="font-size: x-large;" for="email">Email: </label>
+                <input type="email" name="email" id="email"><span id="message2"></span>
+                <label style="font-size: x-large;" for="url">Website: </label>
+                <input type="text" name="email" id="url"><span id="message3"></span>
+                <label style="font-size: x-large;" for="message">Message: </label>
+                <textarea name="message" id="message" cols="30" rows="5"></textarea><span id="message4"></span>
+            </div>
+            <input style="font-size: large;" type="submit" name="Submit" id="submit">
+        </form>
+    </div>
+</body>
+</html>

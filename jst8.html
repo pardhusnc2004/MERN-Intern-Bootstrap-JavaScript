@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK-8</title>
+    <script src="jst8.js"></script>
+    <style>
+        table {
+            width: 700px;
+        }
+        .ip {
+            width: 415px;
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>TASK-5</h1>
+    <div style="display: grid; grid-template-rows: auto auto auto;">
+        <center><div><h1 style="color: blue;">Registration Form</h1></div>
+        <div>
+            <form action="" style="font-size: large;">
+                <table cellspacing="0"  border="0" cellpadding="5px">
+                    <tr><th>First Name</th><td><input class="ip" type="text" name="fname" onkeyup="validateFNameStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="fname"></td> <td><span id="message1">POOR</span></td></tr>
+                    <tr><th>Last Name</th><td><input class="ip" type="text" name="lname" onkeyup="validateLNameStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="lname" ></td> <td><span id="message2">POOR</span></td></tr>
+                    <tr><th>Email</th><td><input class="ip" type="email" name="email" onkeyup="validateEmailStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="email"></td> <td><span id="message3">POOR</span></td></tr>
+                    <tr><th>Password</th><td><input class="ip" type="password" name="pass"  onkeyup="validatePassStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" name="password" id="pwd"></td> <td><span id="message4">POOR</span></td></tr>
+                    <tr><th>Re-Enter Password</th><td><input class="ip" type="password" name="repass" onkeyup="validatePass()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" name="cpassword" id="cpwd"></td> <td><span id="message5">POOR</span></td></tr>
+        
+                    <tr><th rowspan="2">Gender</th><td><input type="radio" name="gender" id="" checked>Male</td></tr>
+                    <tr><td><input type="radio" name="gender" id="">Female</td></tr>
+                    
+                    <tr><th>Age</th><td><input class="ip" type="number" name="age" onkeyup="validateAgeStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="age"> <td><span id="message6">POOR</span></td></td></tr>
+                    <tr><th>Phone</th><td><input class="ip" type="number" name="pno" onkeyup="validatePhoneStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="mobile"> <td><span id="message7">POOR</span></td></td></tr>
+                    <tr><th>Address</th><td><textarea name="address" onkeyup="validateAddressStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="address" cols="54" rows="5"></textarea></td> <td><span id="message8">POOR</span></td></tr>
+                    <tr><th>State</th><td><input class="ip" type="text" name="state"  onkeyup="validateStateStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="state"></td> <td><span id="message9">POOR</span></td></tr>
+                    <tr><th>Country</th><td><select class="ip" name="country" id="">
+                        <option value="india">India</option>
+                        <option value="uk">UK</option>
+                        <option value="swiss">Switzerland</option>
+                        <option value="nzl">New Zealand</option>
+                        <option value="chi">China</option>
+                        <option value="aus">Australia</option>
+                        <option value="usa">USA</option>
+                    </select></td></tr>
+                    <tr><th>Languages Known</th><td>
+                        <input type="checkbox" name="eng" id="">English
+                        <input type="checkbox" name="kan" id="">Kannada
+                        <input type="checkbox" name="hin" id="">Hindi
+                        <input type="checkbox" name="tel" id="">Telugu</td>
+                    </tr>
+                    <tr><td style="margin-left: 0;" colspan="2"><input type="checkbox" name="declaration" id="">&nbsp;Hereby I declare all the given details are true.</td></tr>
+                    <tr><td colspan="3"><p style="margin: 0; margin-left: 68%;">Login to <a href="https://www.ethnus.com">Ethnus</a> website</p></td></tr>
+                </table><br>
+                <button type="button" style="width: 120px; height: 40px; border-radius: 20px; background-color: red; color: white;" name="Register" id="" >Register</button>  
+            </form>
+        </div></center>
+    </div>
+</body>
+</html>

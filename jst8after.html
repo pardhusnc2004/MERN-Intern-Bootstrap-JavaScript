@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jst8.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>JS TASK-8</title>
+    <style>
+        .custom-container {
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS TASK-6</h1>
+    <center>
+        <div style="display: grid; grid-template-rows: auto auto;">
+            <div class="custom-container bg-gradient-primary mx-auto p-5">
+                <h1 style="color: blue;">Registration Form</h1>
+                <form style="font-size: large; margin-top: 3%;">
+                    <div class="row my-2 p-2">
+                        <label for="fname" class="col-3">First Name</label>
+                        <input type="text" name="firstname" onkeyup="validateNameStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="fname" class="col-7 mx-auto">
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message1" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="lname" class="col-3">Last Name</label>
+                        <input type="text" name="lastname" onkeyup="validateNameStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="lname" class="col-7 mx-auto">
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message2" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="email" class="col-3">Email</label>
+                        <input type="email" name="femail" onkeyup="validateEmailStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="email" class="col-7 mx-auto">
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message3" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="pwd" class="col-3">Password</label>
+                        <input type="password" onkeyup="validatePassStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" name="password" id="pwd" class="col-7 mx-auto">
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message4">POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="cpwd" class="col-3">Re-Enter Password</label>
+                        <input type="password" onkeyup="validatePass()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" name="cpassword" id="cpwd" class="col-7 mx-auto">
+                        <span class="col-2" style="font-weight: bold;" id="message5" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label class="col-3">Gender</label>
+                        <div class="col-7">
+                            <label for="male" class="col-2">Male</label>
+                            <input type="radio" name="gender" id="male" class="col-2" checked>
+                            <label for="female" class="col-2">Female</label>
+                            <input type="radio" name="gender" id="female" class="col-2">
+                        </div>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="age" class="col-3">Age</label>
+                        <input type="number" name="age" onkeyup="validateAgeStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="age" class="col-7 mx-auto">
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message6" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="mobile" class="col-3">Phone Number</label>
+                        <input type="number" onkeyup="validatePhoneStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" name="mobile" id="mobile" class="col-7 mx-auto">
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message7" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="address" class="col-3 mt-5">Address</label>
+                        <textarea name="address" onkeyup="validateAddressStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="address" cols="30" rows="3" class="col-7"></textarea>
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message8" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="state" class="col-3">State</label>
+                        <input type="text" name="state" onkeyup="validateStateStrength()" onfocus="highlight(this.id)" onblur="checkandblur(this.id)" id="state" class="col-7 mx-auto">
+                        <span class="col-2 text-danger" style="font-weight: bold;" id="message9" >POOR</span>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="country" class="col-3">Country</label>
+                        <select name="country" id="country" class="col-7 text-center">
+                            <option value="ntg" selected>-- &nbsp; Select a country &nbsp; --</option>
+                            <option value="india">India</option>
+                            <option value="uk">UK</option>
+                            <option value="swiss">Switzerland</option>
+                            <option value="nzl">New Zealand</option>
+                            <option value="chi">China</option>
+                            <option value="aus">Australia</option>
+                            <option value="usa">USA</option>
+                        </select>
+                    </div>
+                    <div class="row my-2 p-2">
+                        <label for="lang" class="col-3">Languages Known</label>
+                        <div class="col-7">
+                            <input type="checkbox" name="eng" id="" class="col-1">English
+                            <input type="checkbox" name="kan" id="" class="col-1">Kannada
+                            <input type="checkbox" name="hin" id="" class="col-1">Hindi
+                            <input type="checkbox" name="tel" id="" class="col-1">Telugu
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <span class="col-6"><input type="checkbox" name="declare" id="declare"> Hereby I declare all the given details are true.</span>
+                        <span class="col-4 text-right">Log In to <a href="">Ethnus</a> website</span>
+                    </div>
+                    <button name="Register" id="" class="col-11 mt-4" style="border: 1px solid grey;" onclick="alert('registration Successful')">Register</button> 
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

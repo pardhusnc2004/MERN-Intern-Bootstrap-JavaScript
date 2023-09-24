@@ -1,0 +1,33 @@
+* {
+    background-color: #f7f7f7;
+}
+body {
+    display: grid;
+}
+h1,div{
+    text-align: center;
+}
+h1{
+    color: rgb(2, 2, 109);
+}
+img{
+    padding-top: 100px;
+    animation: move 9s linear infinite ;
+    animation-play-state: paused;
+}
+button {
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 4%;
+}
+@keyframes move{
+    0% {padding-left: 0%; transition: .9;}
+    100% {padding-left: 80%;}
+}
+.container {
+    display: grid;
+    width: 300px;
+    grid-template-columns: 100px 100px;
+    justify-content: space-around;
+    place-self: center;
+}
